@@ -21,6 +21,10 @@
 
 ;;; Code:
 
+
+(require 'cl-lib)
+
+
 (defvar socyl-backends '()
   "List of available search backends.")
 
@@ -39,24 +43,24 @@
                           (list (cons 'search ,search)))))))
 
 
-(defun socyl-get-backend ()
+(defun socyl--get-backend ()
   "Search for search backene"
   (assoc socyl-backend socyl-backends))
-
-
-(defun socyl-backend-search ()
-  (socyl--with-backend backend
-    (cdadr backend)))
 
 
 (defmacro socyl--with-backend (backend &rest body)
   `(if socyl-backend
        (progn
-         (let ((,backend (socyl-get-backend)))
+         (let ((,backend (socyl--get-backend)))
            (if (null (cdr ,backend))
                (message "Socyl: error with backend: %s=%s" socyl-backend backend)
              ,@body)))
      (message "Socyl: no backend specify.")))
+
+
+(defun socyl-backend-search ()
+  (socyl--with-backend backend
+    (cdadr backend)))
 
 
 (defun socyl-search-regexp (regexp directory &optional args)

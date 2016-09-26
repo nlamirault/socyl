@@ -50,6 +50,7 @@
 (require 'socyl-sift)
 (require 'socyl-pt)
 (require 'socyl-ag)
+(require 'socyl-ripgrep)
 
 
 
