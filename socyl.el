@@ -2,7 +2,7 @@
 
 ;; Author: Nicolas Lamirault <nicolas.lamirault@gmail.com>
 ;; URL: https://github.com/nlamirault/socyl
-;; Version: 0.1.0
+;; Version: 0.2.0
 ;; Keywords: ripgrep sift ack pt ag grep search
 
 ;; Package-Requires: ((s "1.11.0") (dash "2.12.0") (pkg-info "0.5.0"))

@@ -14,10 +14,9 @@ Develop:
 ``socyl`` allows you to search using multiple search tools:
 Supported backends are :
 
-* [x] [ag][]
-* [x] [pt][]
-* [x] [sift][]
-* [ ] [ripgrep][]
+* [ag][]
+* [pt][]
+* [sift][]
 
 
 ## Installation
