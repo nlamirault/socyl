@@ -39,6 +39,12 @@ Choose your backend :
 
 <kbd>M-x socyl-search-regexp</kbd>
 
+to test backends in a IELM session :
+
+```lisp
+ELISP> (let ((socyl-backend 'pt))
+         (socyl-search-regexp "Emacs" "/tmp/"))
+```
 
 
 ## Development
