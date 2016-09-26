@@ -1,5 +1,9 @@
 # Socyl ChangeLog
 
+# Version 0.2.0
+
+- Add Ripgrep backend
+
 # Version 0.1.0 (09/26/2016)
 
 - Add ag backend
