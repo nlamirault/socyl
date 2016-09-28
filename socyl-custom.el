@@ -26,7 +26,8 @@
 
 (defgroup socyl nil
   "Socyl utility"
-  :group 'applications
+  :group 'tools
+  :group 'matching
   :link '(url-link :tag "Socyl" "https://github.com/nlamirault/socyl")
   :link '(emacs-commentary-link :tag "Commentary" "socyl"))
 
