@@ -27,7 +27,7 @@
   (with-test-sandbox
    ;; (message "All backends: %s" socyl-backends)
    (let ((socyl-backend 'ag))
-     (should (equal 'ag (car (socyl-get-backend))))
+     (should (equal 'ag (car (socyl--get-backend))))
      (should (equal 'socyl--ag-regexp (socyl-backend-search))))))
 
 

@@ -1,4 +1,6 @@
-;;; socyl-custom.el --- Socyl customization
+;;; socyl-ripgrep-test.el --- Tests for Socyl ripgrep backend
+
+;; Copyright (C) Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License
@@ -20,32 +22,15 @@
 ;;; Code:
 
 
-;; Faces
-;; --------------------------
+(ert-deftest test-socyl-ripgrep-backend ()
+  :tags '(backend ripgrep)
+  (with-test-sandbox
+   ;; (message "All backends: %s" socyl-backends)
+   (let ((socyl-backend 'ripgrep))
+     (should (equal 'ripgrep (car (socyl--get-backend))))
+     (message "Search : %s" (socyl-backend-search))
+     (should (equal 'socyl--ripgrep-regexp (socyl-backend-search))))))
 
 
-(defgroup socyl nil
-  "Socyl utility"
-  :group 'tools
-  :group 'matching
-  :link '(url-link :tag "Socyl" "https://github.com/nlamirault/socyl")
-  :link '(emacs-commentary-link :tag "Commentary" "socyl"))
-
-(defcustom socyl-highlight-search t
-  "Non-nil means we highlight the current search term in results."
-  :type 'boolean
-  :group 'socyl)
-
-(defface socyl-hit-face '((t :inherit compilation-info))
-  "Face name to use for matches."
-  :group 'socyl)
-
-
-(defface socyl-match-face '((t :inherit match))
-  "Face name to use for matches."
-  :group 'socyl)
-
-
-
-(provide 'socyl-custom)
-;;; socyl-custom.el ends here
+(provide 'socyl-ripgrep-test)
+;;; socyl-ripgrep-test.el ends here
