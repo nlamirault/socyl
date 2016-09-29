@@ -3,13 +3,8 @@
 [![License GPL 2][badge-license]][LICENSE]
 [![Coverage Status](https://coveralls.io/repos/nlamirault/socyl/badge.png?branch=master)](https://coveralls.io/r/nlamirault/socyl?branch=master)
 
-Master :
-* [![MELPA Stable](https://stable.melpa.org/packages/socyl-badge.svg)](https://stable.melpa.org/#/socyl)
-* [![Circle CI](https://circleci.com/gh/nlamirault/socyl/tree/master.svg?style=svg)](https://circleci.com/gh/nlamirault/socyl/tree/master)
-
-Develop:
-* [![Melpa Status](https://melpa.org/packages/socyl-badge.svg)](https://melpa.org/#/socyl)
-* [![Circle CI](https://circleci.com/gh/nlamirault/socyl/tree/develop.svg?style=svg)](https://circleci.com/gh/nlamirault/socyl/tree/develop)
+* Master : [![MELPA Stable](https://stable.melpa.org/packages/socyl-badge.svg)](https://stable.melpa.org/#/socyl) [![Circle CI](https://circleci.com/gh/nlamirault/socyl/tree/master.svg?style=svg)](https://circleci.com/gh/nlamirault/socyl/tree/master)
+* Develop: [![Melpa Status](https://melpa.org/packages/socyl-badge.svg)](https://melpa.org/#/socyl) [![Circle CI](https://circleci.com/gh/nlamirault/socyl/tree/develop.svg?style=svg)](https://circleci.com/gh/nlamirault/socyl/tree/develop)
 
 ``socyl`` allows you to search using multiple search tools:
 Supported backends are :
