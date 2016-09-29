@@ -12,7 +12,7 @@ Supported backends are :
 * [ag][]
 * [pt][]
 * [sift][]
-
+* [ripgrep][]
 
 ## Installation
 
