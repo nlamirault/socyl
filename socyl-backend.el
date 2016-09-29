@@ -60,12 +60,12 @@
 
 (defun socyl-backend-search ()
   (socyl--with-backend backend
-    (cdadr backend)))
+    (cl-cdadr backend)))
 
 
 (defun socyl-search-regexp (regexp directory &optional args)
   (socyl--with-backend backend
-    (funcall (cdadr backend) regexp directory args)))
+    (funcall (cl-cdadr backend) regexp directory args)))
 
 
 (provide 'socyl-backend)
