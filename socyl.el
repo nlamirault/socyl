@@ -5,7 +5,7 @@
 ;; Version: 0.2.0
 ;; Keywords: ripgrep sift ack pt ag grep search
 
-;; Package-Requires: ((s "1.11.0") (dash "2.12.0") (pkg-info "0.5.0"))
+;; Package-Requires: ((s "1.11.0") (dash "2.12.0") (pkg-info "0.5.0") (cl-lib "0.5"))
 
 ;; Copyright (C) 2016 Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
