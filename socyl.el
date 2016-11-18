@@ -1,4 +1,4 @@
-;;; socyl.el --- Socyl, the emacs frontend for several search tools
+;;; socyl.el --- Frontend for several search tools
 
 ;; Author: Nicolas Lamirault <nicolas.lamirault@gmail.com>
 ;; URL: https://github.com/nlamirault/socyl
