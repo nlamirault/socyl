@@ -42,7 +42,6 @@
 (socyl--define-backend pt :search 'socyl--pt-regexp)
 
 
-;;;#autoload
 (defun socyl--pt-regexp (regexp directory &optional args)
   "Run a pt search with REGEXP rooted at DIRECTORY."
   (interactive (list (read-from-minibuffer "Pt search for: " (thing-at-point 'symbol))
