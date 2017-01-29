@@ -42,7 +42,6 @@
 
 ;;; Code:
 
-
 (require 'socyl-version)
 (require 'socyl-custom)
 (require 'socyl-backend)
@@ -51,8 +50,6 @@
 (require 'socyl-pt)
 (require 'socyl-ag)
 (require 'socyl-ripgrep)
-
-
 
 (provide 'socyl)
 ;;; socyl.el ends here

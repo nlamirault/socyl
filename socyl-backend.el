@@ -64,8 +64,12 @@
 
 
 (defun socyl-search-regexp (regexp directory &optional args)
-  (socyl--with-backend backend
-    (funcall (cl-cdadr backend) regexp directory args)))
+  (interactive
+   (list (read-from-minibuffer "Socyl search for: " (thing-at-point 'symbol))
+         (read-directory-name "Directory: ")))
+  (socyl--with-backend
+   backend
+   (funcall (cl-cdadr backend) regexp directory args)))
 
 
 (provide 'socyl-backend)
