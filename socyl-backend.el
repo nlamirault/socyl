@@ -1,6 +1,6 @@
 ;;; socyl-backend.el --- Socyl backend
 
-;; Copyright (C) 2016 Nicolas Lamirault <nicolas.lamirault@gmail.com>
+;; Copyright (C) 2016, 2017 Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License

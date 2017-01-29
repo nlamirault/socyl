@@ -7,7 +7,7 @@
 
 ;; Package-Requires: ((s "1.11.0") (dash "2.12.0") (pkg-info "0.5.0") (cl-lib "0.5"))
 
-;; Copyright (C) 2016 Nicolas Lamirault <nicolas.lamirault@gmail.com>
+;; Copyright (C) 2016, 2017 Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License
