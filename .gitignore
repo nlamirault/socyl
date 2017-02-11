@@ -6,5 +6,6 @@
 elpa
 .projectile
 *.elc
+test/*.elc
 test/sandbox/
 
