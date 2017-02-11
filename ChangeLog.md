@@ -1,5 +1,11 @@
 # Socyl ChangeLog
 
+
+# Version 0.3.0 (02/11/2017)
+
+- [#5](https://github.com/nlamirault/socyl/issues/5): add a prefix to test-helper.el
+- [#4](https://github.com/nlamirault/socyl/issues/4): Fix *socyl-search-regexp* command
+
 # Version 0.2.0 (09/29/2016)
 
 - Add Ripgrep backend
