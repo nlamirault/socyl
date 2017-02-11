@@ -1,6 +1,6 @@
 ;;; socyl-sift-test.el --- Tests for Socyl sift backend
 
-;; Copyright (C) Nicolas Lamirault <nicolas.lamirault@gmail.com>
+;; Copyright (C) 2016, 2017 Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License
@@ -24,7 +24,7 @@
 
 (ert-deftest test-socyl-sift-backend ()
   :tags '(backend sift)
-  (with-test-sandbox
+  (socyl-test-helper-with-test-sandbox
    ;; (message "All backends: %s" socyl-backends)
    (let ((socyl-backend 'sift))
      (should (equal 'sift (car (socyl--get-backend))))
