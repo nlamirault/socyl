@@ -1,6 +1,6 @@
 ;;; socyl-version-test.el --- Tests for version information
 
-;; Copyright (C) Nicolas Lamirault <nicolas.lamirault@gmail.com>
+;; Copyright (C) 2016, 2017 Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License
@@ -28,12 +28,12 @@
 
 (ert-deftest test-socyl-library-version ()
   :tags '(version)
-  (with-test-sandbox
+  (socyl-test-helper-with-test-sandbox
    (should (string= current-version (socyl--library-version)))))
 
 (ert-deftest test-socyl-version ()
   :tags '(version)
-  (with-test-sandbox
+  (socyl-test-helper-with-test-sandbox
    (should (string= current-version (socyl-version)))))
 
 

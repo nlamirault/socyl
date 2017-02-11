@@ -1,6 +1,6 @@
-;; test-socyl.el --- Test helpers for socyl.el
+;; socyl-test-socyl.el --- Test helpers for socyl.el
 
-;; Copyright (C) 2016 Nicolas Lamirault <nicolas.lamirault@gmail.com>
+;; Copyright (C) 2016, 2017 Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 ;; Author: Nicolas Lamirault <nicolas.lamirault@gmail.com>
 ;; Homepage: https://github.com/nlamirault/socyl.el
@@ -35,7 +35,7 @@
 (setq debugger-batch-max-lines (+ 50 max-lisp-eval-depth)
       debug-on-error t)
 
-(defvar scame--username (getenv "HOME"))
+(defvar socyl-test-helper-scame--username (getenv "HOME"))
 
 (defconst socyl-testsuite-dir
   (f-parent (f-this-file))
@@ -49,17 +49,17 @@
   (f-expand "sandbox" socyl-testsuite-dir)
   "The sandbox path for socyl.")
 
-(defun cleanup-load-path ()
+(defun socyl-test-helper--cleanup-load-path ()
   "Remove home directory from 'load-path."
   (message (ansi-green "[socyl] Cleanup path"))
   (mapc #'(lambda (path)
-            (when (string-match (s-concat scame--username "/.emacs.d") path)
+            (when (string-match (s-concat socyl-test-helper-scame--username "/.emacs.d") path)
               (message (ansi-yellow "Suppression path %s" path))
               (setq load-path (delete path load-path))))
         load-path)
   (add-to-list 'load-path socyl-source-dir))
 
-(defun load-unit-tests (path)
+(defun socyl-test-helper--load-unit-tests (path)
   "Load all unit test from PATH."
   (message (ansi-green "[socyl] Execute unit tests %s"
                        path))
@@ -67,7 +67,7 @@
     (load test-file nil t)))
 
 
-(defun load-library (file)
+(defun socyl-test-helper--load-library (file)
   "Load current library from FILE."
   (let ((path (s-concat socyl-source-dir file)))
     (message (ansi-yellow "[socyl] Load library from %s" path))
@@ -75,16 +75,15 @@
     (require 'socyl path)))
 
 
-(defmacro with-test-sandbox (&rest body)
+(defmacro socyl-test-helper-with-test-sandbox (&rest body)
   "Evaluate BODY in an empty sandbox directory."
   `(unwind-protect
        (condition-case nil ;ex
            (let ((default-directory socyl-source-dir))
-             (cleanup-load-path)
-             ;; (message "Load path: %s" load-path)
-             (load-library "/socyl.el")
+             (socyl-test-helper--cleanup-load-path)
+             (socyl-test-helper--load-library "/socyl.el")
              ,@body))))
 
 
-(provide 'test-helper)
-;;; test-helper.el ends here
+(provide 'socyl-test-helper)
+;;; socyl-test-helper.el ends here

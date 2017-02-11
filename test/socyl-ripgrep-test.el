@@ -1,6 +1,6 @@
 ;;; socyl-ripgrep-test.el --- Tests for Socyl ripgrep backend
 
-;; Copyright (C) Nicolas Lamirault <nicolas.lamirault@gmail.com>
+;; Copyright (C) 2016, 2017 Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License
@@ -24,7 +24,7 @@
 
 (ert-deftest test-socyl-ripgrep-backend ()
   :tags '(backend ripgrep)
-  (with-test-sandbox
+  (socyl-test-helper-with-test-sandbox
    ;; (message "All backends: %s" socyl-backends)
    (let ((socyl-backend 'ripgrep))
      (should (equal 'ripgrep (car (socyl--get-backend))))

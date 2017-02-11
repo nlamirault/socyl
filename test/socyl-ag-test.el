@@ -1,6 +1,6 @@
 ;;; socyl-ag-test.el --- Tests for Socyl ag backend
 
-;; Copyright (C) Nicolas Lamirault <nicolas.lamirault@gmail.com>
+;; Copyright (C) 2016, 2017 Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License
@@ -21,10 +21,14 @@
 
 ;;; Code:
 
+(require 'ert)
+(require 'f)
+(when (boundp 'ert-runner-test-path)
+  (load (f-expand "socyl-test-helper.el" ert-runner-test-path) nil :nomessage))
 
 (ert-deftest test-socyl-ag-backend ()
   :tags '(backend ag)
-  (with-test-sandbox
+  (socyl-test-helper-with-test-sandbox
    ;; (message "All backends: %s" socyl-backends)
    (let ((socyl-backend 'ag))
      (should (equal 'ag (car (socyl--get-backend))))

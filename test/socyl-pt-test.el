@@ -1,6 +1,6 @@
 ;;; socyl-pt-test.el --- Tests for Socyl pt backend
 
-;; Copyright (C) Nicolas Lamirault <nicolas.lamirault@gmail.com>
+;; Copyright (C) 2016, 2017 Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License
@@ -24,7 +24,7 @@
 
 (ert-deftest test-socyl-pt-backend ()
   :tags '(backend pt)
-  (with-test-sandbox
+  (socyl-test-helper-with-test-sandbox
    ;; (message "All backends: %s" socyl-backends)
    (let ((socyl-backend 'pt))
      (should (equal 'pt (car (socyl--get-backend))))
