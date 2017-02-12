@@ -61,7 +61,7 @@
                         args
                         '("--no-heading")
                         (list (shell-quote-argument regexp) ".")) " ")
-     'ripgrep-search-mode)))
+     'socyl-search-mode)))
 
 (provide 'socyl-ripgrep)
 ;;; socyl-ripgrep.el ends here
